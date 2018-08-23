@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 class ParkLot {
     private Map<String,Car> carMap = new HashMap<>();
-    private int MAX_COUNT=50;
+    private int maxCount =50;
     boolean park(Car car) {
-        if(carMap.size()<MAX_COUNT){
+        if(carMap.size()< maxCount){
             carMap.put(car.getCarNum(),car);
             return true;
         }
@@ -20,5 +20,9 @@ class ParkLot {
             return pickedCar;
         }
         return null;
+    }
+
+    public void setMaxCount(int maxCount) {
+        this.maxCount = maxCount;
     }
 }

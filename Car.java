@@ -7,8 +7,9 @@ class Car {
         return carNum;
     }
 
-    Car(String carNum) {
+    public void setCarNum(String carNum) {
         this.carNum = carNum;
     }
+
 
 }
